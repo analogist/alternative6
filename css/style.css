@@ -1,3 +1,7 @@
 .form-check-input, .form-check-label, .filltext {
 	font-weight: 300;
 }
+
+#outputtextbox {
+	height: 300px;
+}
