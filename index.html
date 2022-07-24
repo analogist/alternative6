@@ -50,19 +50,35 @@
 
       <h4>Step 1 of 2: Generate Comment</h4>
 
-      <details>
+      <details open>
         <summary><small><i>select one from below</i></small></summary>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="personalID" id="personalID1">
-          <label class="form-check-label" for="personalID1">
-            I am a renter in [YOUR NEIGHBORHOOD]
-          </label>
+        <div class="row row-cols-md-auto g-2 align-items-center">
+          <div class="col-md">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="personalID" id="personalID1">
+              <label class="form-check-label" for="personalID1">I am a renter in </label>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="rentarea" placeholder="Your neighborhood">
+              <label for="rentarea">Your neighborhood</label>
+            </div>
+          </div>
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="personalID" id="personalID2">
-          <label class="form-check-label" for="personalID2">
-            I am a homeowner in [YOUR NEIGHBORHOOD]
-          </label>
+        <div class="row row-cols-md-auto g-2 align-items-center">
+          <div class="col-md">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="personalID" id="personalID2">
+              <label class="form-check-label" for="personalID2">I am a homeowner in </label>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="ownarea" placeholder="Your neighborhood">
+              <label for="ownarea">Your neighborhood</label>
+            </div>
+          </div>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="radio" name="personalID" id="personalID3">
@@ -91,14 +107,22 @@
         <div class="form-check">
           <input class="form-check-input" type="radio" name="personalID" id="personalID7">
           <label class="form-check-label" for="personalID7">
-            I a new resident of Seattle
+            I am a new resident of Seattle
           </label>
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="personalID" id="personalID8">
-          <label class="form-check-label" for="personalID8">
-            I am [YOUR PROFESSION]
-          </label>
+        <div class="row row-cols-md-auto g-2 align-items-center">
+          <div class="col-md">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="personalID" id="personalID8">
+              <label class="form-check-label" for="personalID8">I am a </label>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="profession" placeholder="Your profession">
+              <label for="profession">Your profession</label>
+            </div>
+          </div>
         </div>
       </details>
       <div class="fixedtext" id="fixedtext1">
@@ -106,7 +130,7 @@
       </div>
       <p></p>
       <div class="fixedtext" id="fixedtext2a">Of the current options, Alternative 5 is the bare minimum, but will still not be enough to resolve the many crises our city faces and will certainly not be enough to create a</div>
-      <details>
+      <details open>
         <summary><small><i>select any from below</i></small></summary>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="checkbox" id="cityAdj1" name="cityAdj">
@@ -129,7 +153,7 @@
       <p></p>
 
       <div class="fixedtext" id="fixedtext3">A much better option would be an Alternative 6, which at a minimum would:</div>
-      <details>
+      <details open>
         <summary><small><i>select any from below</i></small></summary>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt1">
@@ -291,7 +315,7 @@
       <p></p>
 
       <div class="fixedtext" id="fixedtext4">If the city of Seattle adopted this proposed Alternative 6 option, then we would be able to:</div>
-      <details>
+      <details open>
         <summary><small><i>select any from below</i></small></summary>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible1">
@@ -441,7 +465,7 @@
       <p></p>
 
       <div class="fixedtext" id="fixedtext5">The other options (Alternatives 1-5) fall short for many reasons, including the following:</div>
-      <details>
+      <details open>
         <summary><small><i>select any from below</i></small></summary>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" name="shortFalls" id="shortFalls1">
@@ -489,7 +513,7 @@
       <p></p>
 
       <div class="fixedtext" id="fixedtext6a">The city of </div>
-      <details>
+      <details open>
         <summary><small><i>select one from below</i></small></summary>
         <div class="form-check">
           <input class="form-check-input" type="radio" name="greatCity" id="greatCity1">
@@ -509,18 +533,29 @@
             Singapore, where 80% of the city’s residents live in housing developed and managed by the government and parks/gardens occupy 47% of the land even while accommodating almost 6 million people,
           </label>
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="greatCity" id="greatCity4">
-          <label class="form-check-label" for="greatCity4">
-            [YOUR FAVORITE URBANIST CITY]
-          </label>
+        <div class="row row-cols-md-auto g-2 align-items-center">
+          <div class="col-1">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="greatCity" id="greatCity4">
+            </div>
+          </div>
+          <div class="col-11">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="modelcity" placeholder="Your favorite model city">
+              <label for="modelcity">Your favorite model city</label>
+            </div>
+          </div>
         </div>
       </details>
-      <div class="fixedtext" id="fixedtext6b"> is a good example of what I would most like Seattle to become. Here is a link to a picture of this city:</div>
-      <div class="filltext" id="fixedtext6c">
-        [LINK TO A PICTURE OF YOUR FAVORITE URBANIST CITY]
+      <div>
+        <span class="fixedtext" id="fixedtext6b"> is a good example of what I would most like Seattle to become.</span>
+        <span class="filltext"><i>(optional)</i></span><span class="filltext" id="fixedtext6c"> Here is a link to a picture of this city:</span>
       </div>
-      <p>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="modelcityphoto" placeholder="Link to model city example photo (optional)">
+        <label for="modelcityphoto">Link to model city example photo (optional)</label>
+      </div>
+      <p></p>
 
       <p class="fixedtext" id="fixedtext7">Please study this proposed Alternative 6 so that we can truly begin to solve the housing, homelessness, climate, inequality, and affordability crises in Seattle.</p>
 
@@ -529,7 +564,7 @@
       </div>
       <p></p>
 
-      <textarea class="form-control" aria-label="output form" id="outputtextbox" readonly>
+      <textarea class="form-control" aria-label="output form" id="outputtextbox">
       </textarea>
       <p></p>
 

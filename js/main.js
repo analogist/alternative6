@@ -7,9 +7,14 @@ function getLabelforForId(inputname) {
     return label.innerHTML.trim();
 }
 
+function getCheckedRadio(groupname) {
+	var selectedradio = document.querySelector('input[name="' + groupname + '"]:checked');
+	return selectedradio;
+}
+
 function getCheckedRadioLabel(groupname) {
 	// see which radio is selected
-	var selectedradio = document.querySelector('input[name="' + groupname + '"]:checked')
+	selectedradio = getCheckedRadio(groupname);
 	if (!selectedradio) {
 		return null;
 	}
@@ -34,12 +39,31 @@ function getAllCheckboxLabels(groupname) {
 	return concatarray;
 }
 
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 function generateSection1() {
 	fill = getCheckedRadioLabel("personalID");
 	if (!fill) {
 		return '';
 	}
 	fixed = document.getElementById("fixedtext1").innerHTML.trim();
+
+	// add additional textboxes
+	switch(getCheckedRadio("personalID").id) {
+		case "personalID1":
+		fill = fill + ' ' + capitalizeFirstLetter(document.getElementById("rentarea").value);
+		break;
+		case "personalID2":
+		fill = fill + ' ' + capitalizeFirstLetter(document.getElementById("ownarea").value);
+		break;
+		case "personalID8":
+		fill = fill + ' ' + document.getElementById("profession").value;
+		break;
+		default:
+		break;
+	}
 	return fill + ', ' + fixed;
 }
 
@@ -89,12 +113,26 @@ function generateSection5() {
 function generateSection6() {
 	fill = getCheckedRadioLabel("greatCity");
 	if (!fill) {
-		return '';
+		// check for custom city box
+		ccb = getCheckedRadio("greatCity");
+		if (ccb && ccb.id == "greatCity4") {
+			fill = capitalizeFirstLetter(document.getElementById("modelcity").value);
+		}
+		else {
+			return '';
+		}
 	}
 	fixedbefore = document.getElementById("fixedtext6a").innerHTML.trim();
 	fixedafter = document.getElementById("fixedtext6b").innerHTML.trim();
 	fixedafter2 = document.getElementById("fixedtext6c").innerHTML.trim();
-	return '\n\n' + fixedbefore + ' ' + fill + ' ' + fixedafter + ' ' + fixedafter2;
+
+	// check to see if photo link
+	modelphoto = document.getElementById("modelcityphoto").value;
+	if (modelphoto.length > 0) {
+		fixedafter = fixedafter + ' ' + fixedafter2 + ' ' + modelphoto.trim();
+	}
+
+	return '\n\n' + fixedbefore + ' ' + fill + ' ' + fixedafter;
 }
 
 function copyTextFunc() {
@@ -122,4 +160,4 @@ function generateMain() {
 
 document.getElementById("genbuttonmain").addEventListener("click", generateMain);
 
-document.getElementById("copybutton").addEventListener("click", copyTextFunc)
+document.getElementById("copybutton").addEventListener("click", copyTextFunc);
