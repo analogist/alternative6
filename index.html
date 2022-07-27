@@ -25,9 +25,10 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-<!--                   <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-                  <li class="nav-item dropdown">
+                  <!-- <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li> -->
+                  <li class="nav-item"><a class="nav-link" href="#posterModal" data-bs-toggle="modal" data-target="#posterModal">Background flier</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#resourcesModal" data-bs-toggle="modal" data-target="#resourcesModal">More resources</a></li>
+<!--                   <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
                       <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                           <li><a class="dropdown-item" href="#">Action</a></li>
@@ -60,57 +61,6 @@
         <i>If you want to learn more about Seattle's Comprehensive Plan Update process, check out <a href="#posterModal" data-bs-toggle="modal" data-target="#posterModal">this one-pager</a> and other <a href="#resourcesModal" data-bs-toggle="modal" data-target="#resourcesModal">additional resources</a></i>.
       </div>
       <p></p>
-
-      <!-- START poster modal -->
-      <div class="modal" id="posterModal" tabindex="-1" role="dialog" aria-labelledby="posterModal" aria-hidden="true">
-        <div class="modal-dialog modal-full" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Comp plan one-pager</h5>
-              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <img class="img-fluid" src="img/Comp_Plan_Overview_Poster.png"></img>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- END poster modal -->
-
-      <!-- START additional comp plan resources modal -->
-      <div class="modal" id="resourcesModal" tabindex="-1" role="dialog" aria-labelledby="resourcesModal" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">More resources on Seattle's Comp Plan</h5>
-              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <ul>
-                <li><a href="https://www.instagram.com/reel/Cgf0kzhpAKf/">Quick comp plan intro video</a> - by calvin.seattle on Instagram
-                </li>
-                <li><a href="https://www.youtube.com/watch?v=ADC11lat30Y">One Seattle Comprehensive Plan Update 101 Presentation</a> - by City of Seattle on YouTube</a>
-                </li>
-                <li><a href="https://www.theurbanist.org/2022/07/27/a-housing-advocates-guide-to-commenting-on-seattles-comprehensive-plan-update/">A Housing Advocate's Guide to Commenting on Seattle's Comp Plan Update</a> - by The Urbanist's Natalie Bicknell Argerious</a>
-                </li>
-                <li><a href="https://docs.google.com/presentation/d/1m81GvJ2BsPD_mkfKQlal13m_l0nJCx_dxMxeo4Vni5g/edit#slide=id.gc6f90357f_0_41">Comp plan and social justice urbanism presentation</a> - by Share The Cities with info on how to use the comp plan website, lists of orgs to pay attention to, and resources to learn more about social justice urbanism on Google Slides</a>
-                </li>
-              </ul>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- END additional comp plan resources modal -->
 
       <h4>Step 1 of 2: Generate Comment</h4>
 
@@ -759,6 +709,57 @@
 
     </div> <!-- class="text-left mt-5"> -->
   </div> <!-- class="container"> -->
+
+  <!-- START poster modal -->
+  <div class="modal" id="posterModal" tabindex="-1" role="dialog" aria-labelledby="posterModal" aria-hidden="true">
+    <div class="modal-dialog modal-full" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Comp plan one-pager</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img class="img-fluid" src="img/Comp_Plan_Overview_Poster.png"></img>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END poster modal -->
+
+  <!-- START additional comp plan resources modal -->
+  <div class="modal" id="resourcesModal" tabindex="-1" role="dialog" aria-labelledby="resourcesModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">More resources on Seattle's Comp Plan</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li><a href="https://www.instagram.com/reel/Cgf0kzhpAKf/">Quick comp plan intro video</a> - by calvin.seattle on Instagram
+            </li>
+            <li><a href="https://www.youtube.com/watch?v=ADC11lat30Y">One Seattle Comprehensive Plan Update 101 Presentation</a> - by City of Seattle on YouTube</a>
+            </li>
+            <li><a href="https://www.theurbanist.org/2022/07/27/a-housing-advocates-guide-to-commenting-on-seattles-comprehensive-plan-update/">A Housing Advocate's Guide to Commenting on Seattle's Comp Plan Update</a> - by The Urbanist's Natalie Bicknell Argerious</a>
+            </li>
+            <li><a href="https://docs.google.com/presentation/d/1m81GvJ2BsPD_mkfKQlal13m_l0nJCx_dxMxeo4Vni5g/edit#slide=id.gc6f90357f_0_41">Comp plan and social justice urbanism presentation</a> - by Share The Cities with info on how to use the comp plan website, lists of orgs to pay attention to, and resources to learn more about social justice urbanism on Google Slides</a>
+            </li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END additional comp plan resources modal -->
 
   <script src="js/main.js"></script>
 
