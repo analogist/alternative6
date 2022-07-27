@@ -2,6 +2,15 @@
 	font-weight: 300;
 }
 
+.modal-full {
+    min-width: 80%;
+    margin: 0;
+}
+
+.modal-full .modal-content {
+    min-height: 100vh;
+}
+
 #outputtextbox {
 	height: 600px;
 }
