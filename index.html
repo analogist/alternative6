@@ -26,7 +26,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                   <!-- <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li> -->
-                  <li class="nav-item"><a class="nav-link" href="#posterModal" data-bs-toggle="modal" data-target="#posterModal">Background flier</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#posterModal" data-bs-toggle="modal" data-target="#posterModal">Background flyer</a></li>
                   <li class="nav-item"><a class="nav-link" href="#resourcesModal" data-bs-toggle="modal" data-target="#resourcesModal">More resources</a></li>
 <!--                   <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
@@ -58,7 +58,7 @@
         <p></p>
         <b>We believe that none of these alternatives go far enough and thus call for an Alternative 6. Join us!</b>
         <p></p>
-        <i>If you want to learn more about Seattle's Comprehensive Plan Update process, check out <a href="#posterModal" data-bs-toggle="modal" data-target="#posterModal">this one-pager</a> and other <a href="#resourcesModal" data-bs-toggle="modal" data-target="#resourcesModal">additional resources</a></i>.
+        <i>If you want to learn more about Seattle's Comprehensive Plan Update process, check out <a href="#posterModal" data-bs-toggle="modal" data-target="#posterModal">this flyer</a> and other <a href="#resourcesModal" data-bs-toggle="modal" data-target="#resourcesModal">additional resources</a></i>.
       </div>
       <p></p>
 
@@ -116,7 +116,7 @@
             </div>
 
             <div v-if="!extend1">
-              <button type="button" @click="extend1 = true" class="btn btn-link">see more options...</button>
+              <button type="button" @click="extend1 = true" class="btn btn-secondary">+ see more options...</button>
             </div>
 
             <div v-if="extend1">
@@ -229,7 +229,7 @@
             </div>
 
             <div v-if="!extend3">
-              <button type="button" @click="extend3 = true" class="btn btn-link">see more options...</button>
+              <button type="button" @click="extend3 = true" class="btn btn-secondary">+ see more options...</button>
             </div>
 
             <div v-if="extend3">
@@ -330,6 +330,12 @@
                 </label>
               </div>
               <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt27">
+                <label class="form-check-label" for="betterOpt27">
+                  - Encourage tree cover by allowing multi-story housing everywhere as long as it incorporates open spaces such as courtyards and plazas
+                </label>
+              </div>
+              <div class="form-check">
                 <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt21">
                 <label class="form-check-label" for="betterOpt21">
                   - Require that 25% of all new units be accessible
@@ -418,7 +424,7 @@
             </div>
 
             <div v-if="!extend4">
-              <button type="button" @click="extend4 = true" class="btn btn-link">see more options...</button>
+              <button type="button" @click="extend4 = true" class="btn btn-secondary">+ see more options...</button>
             </div>
 
             <div v-if="extend4">
@@ -558,7 +564,7 @@
             </div>
 
             <div v-if="!extend5">
-              <button type="button" @click="extend5 = true" class="btn btn-link">see more options...</button>
+              <button type="button" @click="extend5 = true" class="btn btn-secondary">+ see more options...</button>
             </div>
 
             <div v-if="extend5">
