@@ -27,7 +27,6 @@
 
   <link href="css/style.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.37/dist/vue.global.prod.js" integrity="sha256-VqnS1wm2OQ7Af7d0+UvJ0BGSl6FUeeeo1gqC6M4BfeA=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -77,617 +76,615 @@
 
       <h4>Step 1 of 2: Generate Comment</h4>
 
-      <div id="alt6app">
-        <!-- Section 1 -->
-        <div class="card bg-light">
-          <div class="card-header small"><i>select one from below</i></div>
-          <div class="card-body">
+      <!-- Section 1 -->
+      <div class="card bg-light">
+        <div class="card-header small"><i>select one from below</i></div>
+        <div class="card-body">
 
-            <div class="row row-cols-md-auto g-2 align-items-center">
-              <div class="col-md">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="personalID" id="personalID1">
-                  <label class="form-check-label" for="personalID1">I am a renter in </label>
-                </div>
-              </div>
-              <div class="col-md">
-                <div class="form-floating mb-2">
-                  <input type="text" class="form-control" id="rentarea" placeholder="Your neighborhood">
-                  <label for="rentarea">Your neighborhood</label>
-                </div>
+          <div class="row row-cols-md-auto g-2 align-items-center">
+            <div class="col-md">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="personalID" id="personalID1">
+                <label class="form-check-label" for="personalID1">I am a renter in </label>
               </div>
             </div>
-
-            <div class="row row-cols-md-auto g-2 align-items-center">
-              <div class="col-md">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="personalID" id="personalID9">
-                  <label class="form-check-label" for="personalID9">I am housing unstable / living unhoused in </label>
-                </div>
-              </div>
-              <div class="col-md">
-                <div class="form-floating mb-2">
-                  <input type="text" class="form-control" id="unstablearea" placeholder="Your neighborhood">
-                  <label for="unstablearea">Your neighborhood</label>
-                </div>
-              </div>
-            </div>
-
-            <div class="row row-cols-md-auto g-2 align-items-center">
-              <div class="col-md">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="personalID" id="personalID2">
-                  <label class="form-check-label" for="personalID2">I am a homeowner in </label>
-                </div>
-              </div>
-              <div class="col-md">
-                <div class="form-floating mb-2">
-                  <input type="text" class="form-control" id="ownarea" placeholder="Your neighborhood">
-                  <label for="ownarea">Your neighborhood</label>
-                </div>
-              </div>
-            </div>
-
-            <div class="row row-cols-md-auto g-2 align-items-center">
-              <div class="col-md">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="personalID" id="personalID8">
-                  <label class="form-check-label" for="personalID8">I am a </label>
-                </div>
-              </div>
-              <div class="col-md">
-                <div class="form-floating mb-2">
-                  <input type="text" class="form-control" id="profession" placeholder="Your profession">
-                  <label for="profession">Your profession</label>
-                </div>
-              </div>
-            </div>
-
-            <div v-if="!extend1">
-              <button type="button" @click="extend1 = true" class="btn btn-secondary">+ see more options...</button>
-            </div>
-
-            <div v-if="extend1">
-
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="personalID" id="personalID4">
-                <label class="form-check-label" for="personalID4">
-                  I have been priced out of Seattle
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="personalID" id="personalID3">
-                <label class="form-check-label" for="personalID3">
-                  I am a long-time Seattle resident
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="personalID" id="personalID7">
-                <label class="form-check-label" for="personalID7">
-                  I am a new resident of Seattle
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="personalID" id="personalID5">
-                <label class="form-check-label" for="personalID5">
-                  I am a grandparent who wishes their grandkids could live closer
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="personalID" id="personalID6">
-                <label class="form-check-label" for="personalID6">
-                  I grew up in Seattle
-                </label>
-              </div>
-
-            </div> <!-- end extend1 -->
-
-          </div>
-        </div>
-
-
-        <div class="fixedtext" id="fixedtext1">
-          and I believe that Seattle needs to create an Alternative 6 option for the 2024 Comprehensive Plan Update.
-        </div>
-        <!-- End Section 1 -->
-
-        <p></p>
-
-        <!-- Section 2 -->
-        <div class="fixedtext" id="fixedtext2a">Of the current options, Alternative 5 is the bare minimum, but will still not be enough to resolve the many crises our city faces and will certainly not be enough to create a</div>
-
-        <div class="card bg-light">
-          <div class="card-header small"><i>select any from below</i></div>
-          <div class="card-body">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="cityAdj1" name="cityAdj">
-              <label class="form-check-label" for="cityAdj1">vibrant</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="cityAdj2" name="cityAdj">
-              <label class="form-check-label" for="cityAdj2">equitable</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="cityAdj3" name="cityAdj">
-              <label class="form-check-label" for="cityAdj3">sustainable</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="cityAdj4" name="cityAdj">
-              <label class="form-check-label" for="cityAdj4">diverse</label>
-            </div>
-          </div>
-        </div>
-
-        <div class="fixedtext" id="fixedtext2b">place to live into the future.</div>
-        <!-- End Section 2 -->
-
-        <p></p>
-
-
-        <!-- Section 3 -->
-        <div class="fixedtext" id="fixedtext3">A much better option would be an Alternative 6, which at a minimum would:</div>
-
-        <div class="card bg-light">
-          <div class="card-header small"><i>select any from below</i></div>
-          <div class="card-body">
-
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt13">
-              <label class="form-check-label" for="betterOpt13">
-                - Legalize missing middle housing throughout the entire city
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt20">
-              <label class="form-check-label" for="betterOpt20">
-                - Incentivize and allow permanently affordable, cross-class, social housing to be developed
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt19">
-              <label class="form-check-label" for="betterOpt19">
-                - Ensure all major services are within a 15-minute walk or bike ride of every single household
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt7">
-              <label class="form-check-label" for="betterOpt7">
-                - Allow much more multi-family housing to be built away from noisy, polluted arterials
-              </label>
-            </div>
-
-            <div v-if="!extend3">
-              <button type="button" @click="extend3 = true" class="btn btn-secondary">+ see more options...</button>
-            </div>
-
-            <div v-if="extend3">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt10">
-                <label class="form-check-label" for="betterOpt10">
-                  - Allow light industry and commercial uses throughout the entire city
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt8">
-                <label class="form-check-label" for="betterOpt8">
-                  - Build many more affordable multi-family homes with 3+ bedrooms
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt1">
-                <label class="form-check-label" for="betterOpt1">
-                  - Upzone the entire city
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt6">
-                <label class="form-check-label" for="betterOpt6">
-                  - Allow high-rises in all existing urban villages and 12-plexes across the entire rest of the city
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt3">
-                <label class="form-check-label" for="betterOpt3">
-                  - Allow 12-plexes across the entire city
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt4">
-                <label class="form-check-label" for="betterOpt4">
-                  - Allow sixplexes across the entire city
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt5">
-                <label class="form-check-label" for="betterOpt5">
-                  - Allow quadplexes across the entire city
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt2">
-                <label class="form-check-label" for="betterOpt2">
-                  - Allow duplexes across the entire city
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt9">
-                <label class="form-check-label" for="betterOpt9">
-                  - Upzone all current single-family neighborhoods
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt11">
-                <label class="form-check-label" for="betterOpt11">
-                  - Allow light industry and commercial uses in current single-family neighborhoods
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt12">
-                <label class="form-check-label" for="betterOpt12">
-                  - Allow apartments and missing middle housing to be built in current single-family neighborhoods
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt14">
-                <label class="form-check-label" for="betterOpt14">
-                  - Legalize missing middle housing in all current single-family neighborhoods
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt15">
-                <label class="form-check-label" for="betterOpt15">
-                  - Prioritize rezones and multi-family housing across the entire city
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt16">
-                <label class="form-check-label" for="betterOpt16">
-                  - Add more neighborhood parks, particularly in low-income and non-white neighorhoods
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt17">
-                <label class="form-check-label" for="betterOpt17">
-                  - Convert underutilized golf courses near frequent transit into affordable housing and truly public parks that are free to access
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt18">
-                <label class="form-check-label" for="betterOpt18">
-                  - Ensure public and free-to-access green space is within a 15-minute walk of every single household
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt27">
-                <label class="form-check-label" for="betterOpt27">
-                  - Encourage tree cover by allowing multi-story housing everywhere as long as it incorporates open spaces such as courtyards and plazas
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt21">
-                <label class="form-check-label" for="betterOpt21">
-                  - Ensure that at least 25% of all newly built units are accessible
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt22">
-                <label class="form-check-label" for="betterOpt22">
-                  - Incentivize and promote green-built housing
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt23">
-                <label class="form-check-label" for="betterOpt23">
-                  - Eliminate parking minimums
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt24">
-                <label class="form-check-label" for="betterOpt24">
-                  - Expand transit coverage, frequency, and reliability
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt25">
-                <label class="form-check-label" for="betterOpt25">
-                  - Expand the bike lane and trail network
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt26">
-                <label class="form-check-label" for="betterOpt26">
-                  - Build accessible sidewalks throughout the entire city
-                </label>
-              </div>
-            </div> <!-- end extend3 -->
-          </div> <!-- end cardbody -->
-        </div> <!-- end card -->
-        <!-- End Section 3 -->
-
-        <p></p>
-
-        <!-- Section 4 -->
-
-        <div class="fixedtext" id="fixedtext4">If the city of Seattle adopted this proposed Alternative 6 option, then we would be able to:</div>
-
-        <div class="card bg-light">
-          <div class="card-header small"><i>select any from below</i></div>
-          <div class="card-body">
-
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible1">
-              <label class="form-check-label" for="altPossible1">
-                - Enable many more people to live closer to their jobs and reduce their commute times
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible7">
-              <label class="form-check-label" for="altPossible7">
-                - Ensure the best health outcomes for children, which have been shown to occur inside mixed income neighborhoods
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible12">
-              <label class="form-check-label" for="altPossible12">
-                - Enhance housing security of renters and low-income folks
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible17">
-              <label class="form-check-label" for="altPossible17">
-                - Reduce rates of homelessness
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible2">
-              <label class="form-check-label" for="altPossible2">
-                - Reduce greenhouse gas emissions
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible9">
-              <label class="form-check-label" for="altPossible9">
-                - Reduce segregation and begin to correct the legacy of redlining
-              </label>
-            </div>
-
-            <div v-if="!extend4">
-              <button type="button" @click="extend4 = true" class="btn btn-secondary">+ see more options...</button>
-            </div>
-
-            <div v-if="extend4">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible4">
-                <label class="form-check-label" for="altPossible4">
-                  - Reduce reliance on cars and thereby enhance mobility for many disabled folks
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible5">
-                <label class="form-check-label" for="altPossible5">
-                  - Reduce harmful air pollution from cars
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible3">
-                <label class="form-check-label" for="altPossible3">
-                  - Reduce vehicle miles traveled
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible6">
-                <label class="form-check-label" for="altPossible6">
-                  - Enhance water quality and salmon survival via a reduction in car tire pollution
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible8">
-                <label class="form-check-label" for="altPossible8">
-                  - Increase diversity throughout the city
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible10">
-                <label class="form-check-label" for="altPossible10">
-                  - Promote racial justice
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible11">
-                <label class="form-check-label" for="altPossible11">
-                  - Promote environmental justice
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible13">
-                <label class="form-check-label" for="altPossible13">
-                  - Create a more affordable city for everyone
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible14">
-                <label class="form-check-label" for="altPossible14">
-                  - Increase walkability
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible15">
-                <label class="form-check-label" for="altPossible15">
-                  - Increase accessibility
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible16">
-                <label class="form-check-label" for="altPossible16">
-                  - Improve mental health
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible18">
-                <label class="form-check-label" for="altPossible18">
-                  - Keep families together by enabling children and grandchildren to live closer to their parents and grandparents
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible19">
-                <label class="form-check-label" for="altPossible19">
-                  - Slow gentrification and displacement
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible20">
-                <label class="form-check-label" for="altPossible20">
-                  - Create climate resilience
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible21">
-                <label class="form-check-label" for="altPossible21">
-                  - Increase access to green space
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible22">
-                <label class="form-check-label" for="altPossible22">
-                  - Reduce the urban heat island effect
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible23">
-                <label class="form-check-label" for="altPossible23">
-                  - Create a more vibrant and thriving economy
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible24">
-                <label class="form-check-label" for="altPossible24">
-                  - Allow for more opportunities for small businesses
-                </label>
-              </div>
-            </div> <!-- end extend4 -->
-          </div> <!-- end card-body -->
-        </div> <!-- end card-->
-
-        <p></p>
-
-        <!-- Section 4 -->
-
-        <div class="fixedtext" id="fixedtext5">The other options (Alternatives 1-5) fall short for many reasons, including the following:</div>
-
-        <div class="card bg-light">
-          <div class="card-header small"><i>select any from below</i></div>
-          <div class="card-body">
-
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="shortFalls" id="shortFalls1">
-              <label class="form-check-label" for="shortFalls1">
-                - Seattle already faces a housing shortage of dire proportions and none of the current options allow enough housing to be built throughout the city. 
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="shortFalls" id="shortFalls5">
-              <label class="form-check-label" for="shortFalls5">
-                - The current options maintain Seattle's failed "arterial focused development" Urban Village strategies, which have forced almost all existing multi-family homes to be located on noisy, polluted roads. Equitable growth means the entire city can grow together, rather than concentrating narrow pockets of development.
-              </label>
-            </div>
-
-            <div v-if="!extend5">
-              <button type="button" @click="extend5 = true" class="btn btn-secondary">+ see more options...</button>
-            </div>
-
-            <div v-if="extend5">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="shortFalls" id="shortFalls6">
-                <label class="form-check-label" for="shortFalls6">
-                  - The current options entrench the status quo of allowing new housing in only a few select areas of the city, thus also continuing the status quo of segregating people into different neighborhoods by income and allowing new housing primarily along existing arterials, which has well documented negative health effects. This is especially salient in its consequences for child health, as most new families will need housing more affordable than what is currently available in Seattle.
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="shortFalls" id="shortFalls3">
-                <label class="form-check-label" for="shortFalls3">
-                  - Seattle needs many more types of housing than currently exist or that the current alternatives allow for. We need a lot more denser housing that is close to green space, amenities, jobs, and transit.
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="shortFalls" id="shortFalls2">
-                <label class="form-check-label" for="shortFalls2">
-                  - Seattle is decades behind having enough housing for everyone. None of the current options allow enough housing to be built throughout the city.
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="shortFalls" id="shortFalls4">
-                <label class="form-check-label" for="shortFalls4">
-                  - Seattle's current zoning has failed to create equitable growth, displacing people from historically marginalized communities and creating worse health outcomes. Alternatives 1-5 would perpetuate this failure.
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="shortFalls" id="shortFalls7">
-                <label class="form-check-label" for="shortFalls7">
-                  - Seattle already faces a housing shortage of dire proportions, stemming from massive population and job growth over the past decade-as well as from insufficient housing production and planning, for a much longer period. The current alternatives don't do nearly enough to make up for this past underproduction.
-                </label>
-              </div>
-            </div> <!-- end extend5 -->
-
-          </div> <!-- end card-body -->
-        </div> <!-- end card-->
-
-        <p></p>
-
-        <div class="fixedtext" id="fixedtext6a">The city of </div>
-
-        <div class="card bg-light">
-          <div class="card-header small"><i>select one from below</i></div>
-          <div class="card-body">
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="greatCity" id="greatCity1">
-              <label class="form-check-label" for="greatCity1">
-                Seoul, one of the densest but also greenest cities in the world with almost 30% green space and a population of almost 10 million,
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="greatCity" id="greatCity2">
-              <label class="form-check-label" for="greatCity2">
-                Vienna, where more than 60% of the city’s residents live in social housing and homelessness is not an issue,
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="greatCity" id="greatCity3">
-              <label class="form-check-label" for="greatCity3">
-                Singapore, where 80% of the city’s residents live in housing developed and managed by the government and parks/gardens occupy 47% of the land even while accommodating almost 6 million people,
-              </label>
-            </div>
-            <div class="row row-cols-md-auto g-2 align-items-center">
-              <div class="col-1">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="greatCity" id="greatCity4">
-                </div>
-              </div>
-              <div class="col-11">
-                <div class="form-floating mb-2">
-                  <input type="text" class="form-control" id="modelcity" placeholder="Your favorite model city">
-                  <label for="modelcity">Your favorite model city</label>
-                </div>
+            <div class="col-md">
+              <div class="form-floating mb-2">
+                <input type="text" class="form-control" id="rentarea" placeholder="Your neighborhood">
+                <label for="rentarea">Your neighborhood</label>
               </div>
             </div>
           </div>
-        </div>
 
-        <div>
-          <span class="fixedtext" id="fixedtext6b"> is a good example of what I would most like Seattle to become.</span>
-          <span class="fixedtext" id="fixedtext6c"> Here is a link to a picture of this city:</span>
-        </div>
-        <div class="card bg-light">
-          <div class="card-body">
-            <div class="form-floating mb-2">
-              <input type="text" class="form-control" id="modelcityphoto" placeholder="Link to model city example photo">
-              <label for="modelcityphoto">Link to model city example photo</label>
+          <div class="row row-cols-md-auto g-2 align-items-center">
+            <div class="col-md">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="personalID" id="personalID9">
+                <label class="form-check-label" for="personalID9">I am housing unstable / living unhoused in </label>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="form-floating mb-2">
+                <input type="text" class="form-control" id="unstablearea" placeholder="Your neighborhood">
+                <label for="unstablearea">Your neighborhood</label>
+              </div>
             </div>
           </div>
-        </div>
-        <p></p>
 
-        <p class="fixedtext" id="fixedtext7">Please study this proposed Alternative 6 so that we can truly begin to solve the housing, homelessness, climate, inequality, and affordability crises in Seattle.</p>
+          <div class="row row-cols-md-auto g-2 align-items-center">
+            <div class="col-md">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="personalID" id="personalID2">
+                <label class="form-check-label" for="personalID2">I am a homeowner in </label>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="form-floating mb-2">
+                <input type="text" class="form-control" id="ownarea" placeholder="Your neighborhood">
+                <label for="ownarea">Your neighborhood</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row row-cols-md-auto g-2 align-items-center">
+            <div class="col-md">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="personalID" id="personalID8">
+                <label class="form-check-label" for="personalID8">I am a </label>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="form-floating mb-2">
+                <input type="text" class="form-control" id="profession" placeholder="Your profession">
+                <label for="profession">Your profession</label>
+              </div>
+            </div>
+          </div>
+
+          <div id="extend1-btndiv">
+            <button type="button" class="btn btn-secondary extend-opt-btn" id="extend1-btn">+ see more options...</button>
+          </div>
+
+          <div id="extend1-div" class="extend-opt-div">
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="personalID" id="personalID4">
+              <label class="form-check-label" for="personalID4">
+                I have been priced out of Seattle
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="personalID" id="personalID3">
+              <label class="form-check-label" for="personalID3">
+                I am a long-time Seattle resident
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="personalID" id="personalID7">
+              <label class="form-check-label" for="personalID7">
+                I am a new resident of Seattle
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="personalID" id="personalID5">
+              <label class="form-check-label" for="personalID5">
+                I am a grandparent who wishes their grandkids could live closer
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="personalID" id="personalID6">
+              <label class="form-check-label" for="personalID6">
+                I grew up in Seattle
+              </label>
+            </div>
+
+          </div> <!-- end extend1 -->
+
+        </div>
       </div>
+
+
+      <div class="fixedtext" id="fixedtext1">
+        and I believe that Seattle needs to create an Alternative 6 option for the 2024 Comprehensive Plan Update.
+      </div>
+      <!-- End Section 1 -->
+
+      <p></p>
+
+      <!-- Section 2 -->
+      <div class="fixedtext" id="fixedtext2a">Of the current options, Alternative 5 is the bare minimum, but will still not be enough to resolve the many crises our city faces and will certainly not be enough to create a</div>
+
+      <div class="card bg-light">
+        <div class="card-header small"><i>select any from below</i></div>
+        <div class="card-body">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="cityAdj1" name="cityAdj">
+            <label class="form-check-label" for="cityAdj1">vibrant</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="cityAdj2" name="cityAdj">
+            <label class="form-check-label" for="cityAdj2">equitable</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="cityAdj3" name="cityAdj">
+            <label class="form-check-label" for="cityAdj3">sustainable</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="cityAdj4" name="cityAdj">
+            <label class="form-check-label" for="cityAdj4">diverse</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="fixedtext" id="fixedtext2b">place to live into the future.</div>
+      <!-- End Section 2 -->
+
+      <p></p>
+
+
+      <!-- Section 3 -->
+      <div class="fixedtext" id="fixedtext3">A much better option would be an Alternative 6, which at a minimum would:</div>
+
+      <div class="card bg-light">
+        <div class="card-header small"><i>select any from below</i></div>
+        <div class="card-body">
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt13">
+            <label class="form-check-label" for="betterOpt13">
+              - Legalize missing middle housing throughout the entire city
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt20">
+            <label class="form-check-label" for="betterOpt20">
+              - Incentivize and allow permanently affordable, cross-class, social housing to be developed
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt19">
+            <label class="form-check-label" for="betterOpt19">
+              - Ensure all major services are within a 15-minute walk or bike ride of every single household
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt7">
+            <label class="form-check-label" for="betterOpt7">
+              - Allow much more multi-family housing to be built away from noisy, polluted arterials
+            </label>
+          </div>
+
+          <div id="extend3-btndiv">
+            <button type="button" class="btn btn-secondary extend-opt-btn" id="extend3-btn">+ see more options...</button>
+          </div>
+
+          <div id="extend3-div" class="extend-opt-div">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt10">
+              <label class="form-check-label" for="betterOpt10">
+                - Allow light industry and commercial uses throughout the entire city
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt8">
+              <label class="form-check-label" for="betterOpt8">
+                - Build many more affordable multi-family homes with 3+ bedrooms
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt1">
+              <label class="form-check-label" for="betterOpt1">
+                - Upzone the entire city
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt6">
+              <label class="form-check-label" for="betterOpt6">
+                - Allow high-rises in all existing urban villages and 12-plexes across the entire rest of the city
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt3">
+              <label class="form-check-label" for="betterOpt3">
+                - Allow 12-plexes across the entire city
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt4">
+              <label class="form-check-label" for="betterOpt4">
+                - Allow sixplexes across the entire city
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt5">
+              <label class="form-check-label" for="betterOpt5">
+                - Allow quadplexes across the entire city
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt2">
+              <label class="form-check-label" for="betterOpt2">
+                - Allow duplexes across the entire city
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt9">
+              <label class="form-check-label" for="betterOpt9">
+                - Upzone all current single-family neighborhoods
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt11">
+              <label class="form-check-label" for="betterOpt11">
+                - Allow light industry and commercial uses in current single-family neighborhoods
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt12">
+              <label class="form-check-label" for="betterOpt12">
+                - Allow apartments and missing middle housing to be built in current single-family neighborhoods
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt14">
+              <label class="form-check-label" for="betterOpt14">
+                - Legalize missing middle housing in all current single-family neighborhoods
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt15">
+              <label class="form-check-label" for="betterOpt15">
+                - Prioritize rezones and multi-family housing across the entire city
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt16">
+              <label class="form-check-label" for="betterOpt16">
+                - Add more neighborhood parks, particularly in low-income and non-white neighorhoods
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt17">
+              <label class="form-check-label" for="betterOpt17">
+                - Convert underutilized golf courses near frequent transit into affordable housing and truly public parks that are free to access
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt18">
+              <label class="form-check-label" for="betterOpt18">
+                - Ensure public and free-to-access green space is within a 15-minute walk of every single household
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt27">
+              <label class="form-check-label" for="betterOpt27">
+                - Encourage tree cover by allowing multi-story housing everywhere as long as it incorporates open spaces such as courtyards and plazas
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt21">
+              <label class="form-check-label" for="betterOpt21">
+                - Ensure that at least 25% of all newly built units are accessible
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt22">
+              <label class="form-check-label" for="betterOpt22">
+                - Incentivize and promote green-built housing
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt23">
+              <label class="form-check-label" for="betterOpt23">
+                - Eliminate parking minimums
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt24">
+              <label class="form-check-label" for="betterOpt24">
+                - Expand transit coverage, frequency, and reliability
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt25">
+              <label class="form-check-label" for="betterOpt25">
+                - Expand the bike lane and trail network
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="betterOpt" id="betterOpt26">
+              <label class="form-check-label" for="betterOpt26">
+                - Build accessible sidewalks throughout the entire city
+              </label>
+            </div>
+          </div> <!-- end extend3 -->
+        </div> <!-- end cardbody -->
+      </div> <!-- end card -->
+      <!-- End Section 3 -->
+
+      <p></p>
+
+      <!-- Section 4 -->
+
+      <div class="fixedtext" id="fixedtext4">If the city of Seattle adopted this proposed Alternative 6 option, then we would be able to:</div>
+
+      <div class="card bg-light">
+        <div class="card-header small"><i>select any from below</i></div>
+        <div class="card-body">
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible1">
+            <label class="form-check-label" for="altPossible1">
+              - Enable many more people to live closer to their jobs and reduce their commute times
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible7">
+            <label class="form-check-label" for="altPossible7">
+              - Ensure the best health outcomes for children, which have been shown to occur inside mixed income neighborhoods
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible12">
+            <label class="form-check-label" for="altPossible12">
+              - Enhance housing security of renters and low-income folks
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible17">
+            <label class="form-check-label" for="altPossible17">
+              - Reduce rates of homelessness
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible2">
+            <label class="form-check-label" for="altPossible2">
+              - Reduce greenhouse gas emissions
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible9">
+            <label class="form-check-label" for="altPossible9">
+              - Reduce segregation and begin to correct the legacy of redlining
+            </label>
+          </div>
+
+          <div id="extend4-btndiv">
+            <button type="button" class="btn btn-secondary extend-opt-btn" id="extend4-btn">+ see more options...</button>
+          </div>
+
+          <div id="extend4-div" class="extend-opt-div">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible4">
+              <label class="form-check-label" for="altPossible4">
+                - Reduce reliance on cars and thereby enhance mobility for many disabled folks
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible5">
+              <label class="form-check-label" for="altPossible5">
+                - Reduce harmful air pollution from cars
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible3">
+              <label class="form-check-label" for="altPossible3">
+                - Reduce vehicle miles traveled
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible6">
+              <label class="form-check-label" for="altPossible6">
+                - Enhance water quality and salmon survival via a reduction in car tire pollution
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible8">
+              <label class="form-check-label" for="altPossible8">
+                - Increase diversity throughout the city
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible10">
+              <label class="form-check-label" for="altPossible10">
+                - Promote racial justice
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible11">
+              <label class="form-check-label" for="altPossible11">
+                - Promote environmental justice
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible13">
+              <label class="form-check-label" for="altPossible13">
+                - Create a more affordable city for everyone
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible14">
+              <label class="form-check-label" for="altPossible14">
+                - Increase walkability
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible15">
+              <label class="form-check-label" for="altPossible15">
+                - Increase accessibility
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible16">
+              <label class="form-check-label" for="altPossible16">
+                - Improve mental health
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible18">
+              <label class="form-check-label" for="altPossible18">
+                - Keep families together by enabling children and grandchildren to live closer to their parents and grandparents
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible19">
+              <label class="form-check-label" for="altPossible19">
+                - Slow gentrification and displacement
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible20">
+              <label class="form-check-label" for="altPossible20">
+                - Create climate resilience
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible21">
+              <label class="form-check-label" for="altPossible21">
+                - Increase access to green space
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible22">
+              <label class="form-check-label" for="altPossible22">
+                - Reduce the urban heat island effect
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible23">
+              <label class="form-check-label" for="altPossible23">
+                - Create a more vibrant and thriving economy
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="altPossible" id="altPossible24">
+              <label class="form-check-label" for="altPossible24">
+                - Allow for more opportunities for small businesses
+              </label>
+            </div>
+          </div> <!-- end extend4 -->
+        </div> <!-- end card-body -->
+      </div> <!-- end card-->
+
+      <p></p>
+
+      <!-- Section 4 -->
+
+      <div class="fixedtext" id="fixedtext5">The other options (Alternatives 1-5) fall short for many reasons, including the following:</div>
+
+      <div class="card bg-light">
+        <div class="card-header small"><i>select any from below</i></div>
+        <div class="card-body">
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="shortFalls" id="shortFalls1">
+            <label class="form-check-label" for="shortFalls1">
+              - Seattle already faces a housing shortage of dire proportions and none of the current options allow enough housing to be built throughout the city. 
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="shortFalls" id="shortFalls5">
+            <label class="form-check-label" for="shortFalls5">
+              - The current options maintain Seattle's failed "arterial focused development" Urban Village strategies, which have forced almost all existing multi-family homes to be located on noisy, polluted roads. Equitable growth means the entire city can grow together, rather than concentrating narrow pockets of development.
+            </label>
+          </div>
+
+          <div id="extend5-btndiv">
+            <button type="button" class="btn btn-secondary extend-opt-btn" id="extend5-btn">+ see more options...</button>
+          </div>
+
+          <div id="extend5-div" class="extend-opt-div">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="shortFalls" id="shortFalls6">
+              <label class="form-check-label" for="shortFalls6">
+                - The current options entrench the status quo of allowing new housing in only a few select areas of the city, thus also continuing the status quo of segregating people into different neighborhoods by income and allowing new housing primarily along existing arterials, which has well documented negative health effects. This is especially salient in its consequences for child health, as most new families will need housing more affordable than what is currently available in Seattle.
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="shortFalls" id="shortFalls3">
+              <label class="form-check-label" for="shortFalls3">
+                - Seattle needs many more types of housing than currently exist or that the current alternatives allow for. We need a lot more denser housing that is close to green space, amenities, jobs, and transit.
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="shortFalls" id="shortFalls2">
+              <label class="form-check-label" for="shortFalls2">
+                - Seattle is decades behind having enough housing for everyone. None of the current options allow enough housing to be built throughout the city.
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="shortFalls" id="shortFalls4">
+              <label class="form-check-label" for="shortFalls4">
+                - Seattle's current zoning has failed to create equitable growth, displacing people from historically marginalized communities and creating worse health outcomes. Alternatives 1-5 would perpetuate this failure.
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="shortFalls" id="shortFalls7">
+              <label class="form-check-label" for="shortFalls7">
+                - Seattle already faces a housing shortage of dire proportions, stemming from massive population and job growth over the past decade-as well as from insufficient housing production and planning, for a much longer period. The current alternatives don't do nearly enough to make up for this past underproduction.
+              </label>
+            </div>
+          </div> <!-- end extend5 -->
+
+        </div> <!-- end card-body -->
+      </div> <!-- end card-->
+
+      <p></p>
+
+      <div class="fixedtext" id="fixedtext6a">The city of </div>
+
+      <div class="card bg-light">
+        <div class="card-header small"><i>select one from below</i></div>
+        <div class="card-body">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="greatCity" id="greatCity1">
+            <label class="form-check-label" for="greatCity1">
+              Seoul, one of the densest but also greenest cities in the world with almost 30% green space and a population of almost 10 million,
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="greatCity" id="greatCity2">
+            <label class="form-check-label" for="greatCity2">
+              Vienna, where more than 60% of the city’s residents live in social housing and homelessness is not an issue,
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="greatCity" id="greatCity3">
+            <label class="form-check-label" for="greatCity3">
+              Singapore, where 80% of the city’s residents live in housing developed and managed by the government and parks/gardens occupy 47% of the land even while accommodating almost 6 million people,
+            </label>
+          </div>
+          <div class="row row-cols-md-auto g-2 align-items-center">
+            <div class="col-1">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="greatCity" id="greatCity4">
+              </div>
+            </div>
+            <div class="col-11">
+              <div class="form-floating mb-2">
+                <input type="text" class="form-control" id="modelcity" placeholder="Your favorite model city">
+                <label for="modelcity">Your favorite model city</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <span class="fixedtext" id="fixedtext6b"> is a good example of what I would most like Seattle to become.</span>
+        <span class="fixedtext" id="fixedtext6c"> Here is a link to a picture of this city:</span>
+      </div>
+      <div class="card bg-light">
+        <div class="card-body">
+          <div class="form-floating mb-2">
+            <input type="text" class="form-control" id="modelcityphoto" placeholder="Link to model city example photo">
+            <label for="modelcityphoto">Link to model city example photo</label>
+          </div>
+        </div>
+      </div>
+      <p></p>
+
+      <p class="fixedtext" id="fixedtext7">Please study this proposed Alternative 6 so that we can truly begin to solve the housing, homelessness, climate, inequality, and affordability crises in Seattle.</p>
 
       <div class="d-grid gap-2 col-lg-4 col-sm-6 mx-auto">
         <button class="btn btn-primary" type="button" id="genbuttonmain">Generate comment from selections</button>
@@ -799,21 +796,6 @@
 
   <!-- Bootstrap core JS-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-
-  <script>
-    const { createApp } = Vue
-
-    createApp({
-      data() {
-        return {
-          extend1: false,
-          extend3: false,
-          extend4: false,
-          extend5: false
-        }
-      }
-    }).mount('#alt6app')
-  </script>
 </body>
 
 </html>

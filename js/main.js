@@ -138,9 +138,16 @@ function generateSection6() {
 	return '\n\n' + fixedbefore + ' ' + fill + ' ' + fixedafter;
 }
 
-function copyTextFunc() {
-	outputbox = document.getElementById("outputtextbox");
-	navigator.clipboard.writeText(outputbox.value);
+function extendOptionsHandler(event) {
+	btnId = event.target.id;
+	btnDivId = event.target.id + 'div';
+	extendDivId = event.target.id.replace(/-btn$/i, '-div');
+
+	btnDiv = document.getElementById(btnDivId);
+	extendDiv = document.getElementById(extendDivId);
+
+	extendDiv.style.display = "block";
+	btnDiv.style.display = "none";
 }
 
 function generateMain() {
@@ -163,4 +170,12 @@ function generateMain() {
 
 document.getElementById("genbuttonmain").addEventListener("click", generateMain);
 
-document.getElementById("copybutton").addEventListener("click", copyTextFunc);
+document.getElementById("copybutton").addEventListener("click", () => {
+	outputbox = document.getElementById("outputtextbox");
+	navigator.clipboard.writeText(outputbox.value);
+});
+
+// add extendOptionsHandler to every extend-opt-btn button
+for (let extendBtn of document.getElementsByClassName('extend-opt-btn')) {
+	extendBtn.addEventListener("click", extendOptionsHandler);
+}

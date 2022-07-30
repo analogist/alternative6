@@ -14,3 +14,7 @@
 #outputtextbox {
 	height: 600px;
 }
+
+.extend-opt-div {
+    display: none;
+}
