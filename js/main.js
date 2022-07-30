@@ -58,6 +58,9 @@ function generateSection1() {
 		case "personalID2":
 		fill = fill + ' ' + capitalizeFirstLetter(document.getElementById("ownarea").value);
 		break;
+		case "personalID9":
+		fill = fill + ' ' + capitalizeFirstLetter(document.getElementById("unstablearea").value);
+		break;
 		case "personalID8":
 		fill = fill + ' ' + document.getElementById("profession").value;
 		break;
