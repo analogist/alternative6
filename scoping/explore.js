@@ -15,9 +15,7 @@ createApp({
       .then(data => (this.compplandata = data))
     fetch('compplan-search-index.json')
       .then(response => response.json())
-      .then(data => (
-        this.compplanidx = lunr.Index.load(data)
-        ))
+      .then(data => (this.compplanidx = lunr.Index.load(data)))
   },
   methods: {
     filterideas() {
@@ -25,9 +23,11 @@ createApp({
         this.compplanfiltered = null;
         return;
       }
-      var outputstruct = this.compplanidx.search(this.filterstr);
-      var outputarr = outputstruct.map(el => el.ref);
-      this.compplanfiltered = this.compplandata.filter(el => outputarr.includes(el.slug));
+      var searchoutput = this.compplanidx.search(this.filterstr);
+      var outputmap = new Map(searchoutput.map(obj => [obj.ref, obj.score]));
+      this.compplanfiltered = this.compplandata
+        .filter(el => (outputmap.has(el.slug)))
+        .sort((a, b) => (outputmap.get(b.slug) - outputmap.get(a.slug)));
     }
   },
   computed: {

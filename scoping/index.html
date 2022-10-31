@@ -67,8 +67,9 @@
     <div class="text-left mt-5">
       <div id="exploreapp">
 
+        <label for="searchphrase">Filter comments using search terms here. Results can contain any one of your search terms. To match all of your words, add + before each word. To exclude words, add - before each word.</label>
         <div class="input-group mb-3">
-          <input type="text" @keyup.enter="filterideas()" class="form-control" placeholder="phrase to search" aria-label="Search phrase" aria-describedby="basic-addon2" v-model="filterstr">
+          <input type="text" @keyup.enter="filterideas()" class="form-control" id="searchphrase" placeholder="+large +trees -density" aria-label="Search phrase" aria-describedby="basic-addon2" v-model="filterstr">
           <div class="input-group-append">
             <button @click="filterideas" class="btn btn-outline-secondary position-relative" type="button">
               Search
