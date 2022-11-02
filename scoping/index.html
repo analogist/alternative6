@@ -27,6 +27,15 @@
 
   <!-- <link href="css/style.css" rel="stylesheet"> -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <style>
+    pre {
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+    }
+  </style>
 
   <script src="https://cdn.jsdelivr.net/npm/vue@3.2.41/dist/vue.global.prod.js" integrity="sha256-kgmHr8X3NCK+tP7+Mlnaxylp5JoAt1tcOAfa6WvELRg=" crossorigin="anonymous"></script>
 
@@ -89,10 +98,15 @@
                   <a v-if="data.title" :href="data.slug">{{data.title}}</a>
                   <a v-else :href="data.slug">{{data.slug}}</a>
                 </h5>
-                <h6 class="card-subtitle mb-2 text-muted">{{data.timestamp}}</h6>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  <span v-if="data.upvotes !== null">{{data.upvotes}}👍 {{data.downvotes}}👎</span>
+                  <span v-else>✉️</span>
+                  {{data.timestamp}}
+                </h6>
               </div>
               <div class="card-body">
-                <p class="card-text" v-html="data.body"></p>
+                <pre class="card-text" v-if="data.upvotes === null">{{data.body}}</pre>
+                <p class="card-text" v-else v-html="data.body"></p>
               </div>
             </div>
           </div>
