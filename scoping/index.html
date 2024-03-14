@@ -26,7 +26,7 @@
   <meta name="og:type" content="website">
 
   <!-- <link href="css/style.css" rel="stylesheet"> -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <style>
     pre {
         white-space: pre-wrap;
@@ -37,7 +37,7 @@
     }
   </style>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.41/dist/vue.global.prod.js" integrity="sha256-kgmHr8X3NCK+tP7+Mlnaxylp5JoAt1tcOAfa6WvELRg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.47/dist/vue.global.prod.js" integrity="sha256-nD+4X/UNYqnXqWJINYbQ2ptd/0F72GB75bGgIdWtYsM=" crossorigin="anonymous"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js" integrity="sha256-DFDZACuFeAqEKv/7Vnu1Tt5ALa58bcWZegGGFNgET8g=" crossorigin="anonymous"></script>
 </head>
@@ -46,7 +46,8 @@
   <!-- Responsive navbar-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-          <a class="navbar-brand" href="#">CompPlanExplore</a>
+          <a class="navbar-brand" href="/">Alternative6</a>
+          <span class="navbar-text">Scoping Explorer</span>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -68,7 +69,13 @@
   </nav>
   <!-- Page content-->
   <div class="container">
+
     <div class="text-center mt-5">
+      <div class="alert alert-warning" role="alert">
+        <b>NOTE</b>: This is an archived comment explorer from the previous Scoping Phase of the Seattle 2024 Comprehensive Plan.<br />
+        <a href="/">To access information for the latest Phase, please return to the homepage.</a>
+      </div>
+
       <h1>Seattle Comprehensive Plan Explorer</h1>
       <p class="lead">A Seattle Comprehensive Plan "scoping phase" comment explorer. A project of <a href="https://sharethecities.org/" target="_blank" rel="noopener noreferrer">Share The Cities.</a></p>
     </div>
@@ -76,7 +83,7 @@
     <div class="text-left mt-5">
       <div id="exploreapp">
 
-        <label for="searchphrase">Filter comments using search terms here. Results can contain any one of your search terms. To match all of your words, add + before each word. To exclude words, add - before each word.</label>
+        <label for="searchphrase">Filter comments using search terms here. Results can contain any one of your search terms. To match all of your words, add + before each word. To exclude words, add - before each word. To include an exact wording or phrase, put it in quotes: <code>"mental and physical health"</code></label>
         <div class="input-group mb-3">
           <input type="text" @keyup.enter="filterideas()" class="form-control" id="searchphrase" placeholder="+large +trees -density" aria-label="Search phrase" aria-describedby="basic-addon2" v-model="filterstr">
           <div class="input-group-append">
@@ -119,7 +126,7 @@
   <script type="module" src="explore.js"></script>
 
   <!-- Bootstrap core JS-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 
 </html>
