@@ -1,0 +1,32 @@
+.form-check-input, .form-check-label, .filltext {
+	font-weight: 300;
+}
+
+.form-check-label, .fixedtext, #outputtextbox {
+    color: darkblue;
+}
+
+.fixedtext {
+    font-size: large;
+}
+
+.modal-full {
+    min-width: 80%;
+    margin: 0;
+}
+
+.modal-full .modal-content {
+    min-height: 100vh;
+}
+
+#outputtextbox {
+	height: 60vh;
+}
+
+.extend-opt-div {
+    display: none;
+}
+
+.rfloatcol {
+    align-items: flex-start;
+}
