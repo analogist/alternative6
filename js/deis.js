@@ -2,7 +2,7 @@ function generateSection1() {
 	fillpid = getCheckedRadioLabel("personalID");
 	fillbetteropt = getCheckedRadioLabel("betterOpt");
 
-	if (!fillpid || !fillbetteropt) {
+	if (!fillpid && !fillbetteropt) {
 		return '';
 	}
 
@@ -10,21 +10,29 @@ function generateSection1() {
 	fixed1b = document.getElementById("fixedtext1b").innerHTML.trim();
 
 	// add additional textboxes
-	switch(getCheckedRadio("personalID").id) {
-		case "personalID1":
-		fillpid = fillpid + ' ' + capitalizeFirstLetter(document.getElementById("rentarea").value);
-		break;
-		case "personalID2":
-		fillpid = fillpid + ' ' + capitalizeFirstLetter(document.getElementById("ownarea").value);
-		break;
-		case "personalID9":
-		fillpid = fillpid + ' ' + capitalizeFirstLetter(document.getElementById("unstablearea").value);
-		break;
-		case "personalID8":
-		fillpid = fillpid + ' ' + document.getElementById("profession").value;
-		break;
-		default:
-		break;
+	if (fillpid) {
+		switch(getCheckedRadio("personalID").id) {
+			case "personalID1":
+			fillpid = fillpid + ' ' + capitalizeFirstLetter(document.getElementById("rentarea").value);
+			break;
+			case "personalID2":
+			fillpid = fillpid + ' ' + capitalizeFirstLetter(document.getElementById("ownarea").value);
+			break;
+			case "personalID9":
+			fillpid = fillpid + ' ' + capitalizeFirstLetter(document.getElementById("unstablearea").value);
+			break;
+			case "personalID8":
+			fillpid = fillpid + ' ' + document.getElementById("profession").value;
+			break;
+			default:
+			break;
+		}
+	} else {
+		fillpid = "___";
+	}
+
+	if (!fillbetteropt) {
+		fillbetteropt = "____.";
 	}
 	return fillpid + ', ' + fixed1a + ' ' + fixed1b + ' ' + fillbetteropt;
 }
@@ -45,11 +53,19 @@ function generateSection3() {
 	fillcityadj = getAllCheckboxLabels("cityAdj");
 	fillimprove = getCheckedRadioLabel("betterImpr");
 
-	if (!fillcityadj || !fillimprove) {
+	if (!fillcityadj && !fillimprove) {
 		return '';
 	}
 
-	fillcityadj = fillcityadj.join(", ");
+	if (fillcityadj) {
+		fillcityadj = fillcityadj.join(", ");
+	} else {
+		fillcityadj = "___";
+	}
+
+	if (!fillimprove) {
+		fillimprove = "___";
+	}
 
 	return ' ' + fixedbefore + ' ' + fillcityadj + ' ' + fixedmiddle + ' ' + fillimprove;
 }
@@ -58,8 +74,16 @@ function generateSection4() {
 	fillneigh = capitalizeFirstLetter(document.getElementById("specneighborhood").value);
 	fillpropos = document.getElementById("proposaltextbox").value;
 
-	if (!fillneigh || !fillpropos) {
+	if (!fillneigh && !fillpropos) {
 		return '';
+	}
+
+	if (!fillneigh) {
+		fillneigh = "___";
+	}
+
+	if (!fillpropos) {
+		fillpropos = "___";
 	}
 
 	fixedbefore = document.getElementById("fixedtext4a").innerHTML.trim();
@@ -98,14 +122,14 @@ function enableAutoGenerate() {
 	genbutton = document.getElementById("genbuttonmain");
 	setAllInputEventListeners("input", generateMain, true);
 	genbutton.classList.replace('btn-warning', 'btn-primary');
-	genbutton.innerHTML = "↻ Generate comment from selections"
+	genbutton.innerHTML = "↻ Autogenerating comment from selections"
 }
 
 function disableAutoGenerate() {
 	genbutton = document.getElementById("genbuttonmain");
 	setAllInputEventListeners("input", generateMain, false);
 	genbutton.classList.replace('btn-primary', 'btn-warning');
-	genbutton.innerHTML = "⚠ Regenerate edited comment"
+	genbutton.innerHTML = "⚠ Regenerate comment<br />(overwrites custom edits)"
 }
 
 function updateCharCountBar() {
