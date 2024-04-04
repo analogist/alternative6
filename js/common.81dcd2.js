@@ -64,7 +64,12 @@ function extendOptionsHandler(event) {
 	btnDiv = document.getElementById(btnDivId);
 	extendDiv = document.getElementById(extendDivId);
 
-	extendDiv.style.display = "block";
+	if (extendDiv.tagName == "SPAN") {
+		extendDiv.style.display = "inline";
+	} else {
+		extendDiv.style.display = "block";
+	}
+
 	btnDiv.style.display = "none";
 }
 
