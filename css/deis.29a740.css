@@ -23,6 +23,11 @@
 	height: 60vh;
 }
 
+#emailtextbox {
+    height: 60vh;
+    color: darkgreen;
+}
+
 .extend-opt-div {
     display: none;
 }

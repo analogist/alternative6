@@ -116,6 +116,7 @@ function generateMain() {
 	// fill in the output box
 	outputbox.value = fulltext;
 	updateCharCountBar();
+	updateEmailBox();
 }
 
 function enableAutoGenerate() {
@@ -154,6 +155,21 @@ function updateCharCountBar() {
 	}
 }
 
+function updateEmailBox() {
+	outputbox = document.getElementById("outputtextbox");
+	emailbox = document.getElementById("emailtextbox");
+
+	fulltext = "Dear Mayor Harrell,\n\nI am writing to you because adding more \
+housing in all neighborhoods, planning for much more growth, and developing \
+the city in a more sustainable and equitable way via this Seattle Comprehensive \
+Plan Update is a major political priority for me. I am looking to you and the \
+Council for leadership on this and will certainly be considering your decisions \
+and work on the Comp Plan in the next election.\n\n" +
+outputbox.value +
+"\n\n<OPTIONAL PERSONAL STORY OR EXPERIENCE>\n\nSincerely,\n<YOUR NAME>";
+	emailbox.value = fulltext;
+}
+
 // add extendOptionsHandler to every extend-opt-btn button
 for (let extendBtn of document.getElementsByClassName('extend-opt-btn')) {
 	extendBtn.addEventListener("click", extendOptionsHandler);
@@ -162,6 +178,12 @@ for (let extendBtn of document.getElementsByClassName('extend-opt-btn')) {
 // Listener for copy text button
 document.getElementById("copybutton").addEventListener("click", () => {
 	outputbox = document.getElementById("outputtextbox");
+	navigator.clipboard.writeText(outputbox.value);
+});
+
+// Listener for copy text button
+document.getElementById("copyemailbtn").addEventListener("click", () => {
+	outputbox = document.getElementById("emailtextbox");
 	navigator.clipboard.writeText(outputbox.value);
 });
 
@@ -175,6 +197,12 @@ document.getElementById("genbuttonmain").addEventListener("click", () => {
 document.getElementById("outputtextbox").addEventListener("input", () => {
 	disableAutoGenerate();
 	updateCharCountBar();
+	updateEmailBox();
+})
+document.getElementById("emailtextbox").addEventListener("input", () => {
+	disableAutoGenerate();
+	updateCharCountBar();
+	updateEmailBox();
 })
 
 // Start off with all listeners initialized
